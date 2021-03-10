@@ -9,8 +9,8 @@ require('dotenv').config();
 
 // require routes
 const authRoutes = require('./routes/auth');
+const postRoutes = require('./routes/post');
 const indexRoutes = require('./routes/index'); // place this last (error page)
-const passport = require('./config/passport');
 
 // require mongoose configurations
 require('./config/mongoose')(mongoose);
@@ -37,6 +37,7 @@ app.use(express.json());
 
 // ROUTES
 app.use('/auth', authRoutes);
+app.use('/posts', postRoutes);
 app.use(indexRoutes); // place this last because of the error page
 
 // App server

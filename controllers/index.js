@@ -3,7 +3,7 @@ const index = (req, res) => {
     res.status(200).json({
       response: {
         code: 200,
-        message: 'Welcome to My Reason Digital Solution!',
+        message: 'Welcome to My Reason Digital Solution! To access the Post routes, ensure you signup then login to get your authorization token.',
       },
     });
   };

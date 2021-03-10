@@ -6,7 +6,7 @@ const passport = require('passport');
 const index = require('../controllers/index');
 
 // Landing Route
-router.get('/', passport.authenticate('jwt', {session: false}), index.index);
+router.get('/', index.index);
 
 // Error Route (i.e every other route)
 router.get('/*', index.errorPage);
